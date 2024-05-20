@@ -1,0 +1,410 @@
+// // Diary.scss
+
+// .search-input {
+//   width: 100%;
+//   padding: 8px;
+//   border-radius: 5px;
+//   border: 1px solid #ccc;
+//   margin-top: 20%;
+// }
+
+// .city-select {
+//   width: 100%;
+//   padding: 8px;
+//   border-radius: 5px;
+//   border: 1px solid #ccc;
+//   margin-bottom: 5px;
+// }
+
+// .card-container {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   background-color: blue;
+  
+
+//   .card {
+//     position: relative;
+//     width: 400px;
+//     height: auto;
+//     margin: 10px;
+//     border-radius: 10px;
+//     background-color: #f7f7f7;
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//     overflow: hidden;
+
+//     .card-content {
+//       padding: 15px;
+
+//       .rank {
+//         font-size: 24px;
+//         font-weight: bold;
+//         color: #333;
+//       }
+      
+//       .college-name {
+//         margin-top: 10px;
+//         font-size: 18px;
+//         color: #666;
+//       }
+//     }
+
+//     .city {
+//       position: absolute;
+//       bottom: 0;
+//       left: 0;
+//       width: 100%;
+//       background-color: rgba(0, 0, 0, 0.7);
+//       color: #fff;
+//       padding: 5px;
+//       font-size: 14px;
+//       transition: opacity 0.3s;
+//       opacity: 0;
+//       pointer-events: none;
+//     }
+    
+    
+//   }
+//   .card:hover .city {
+//     opacity: 1;
+//   }
+  
+// }
+
+
+//---------------------------------------------------
+
+// Diary.scss
+
+.diary_bg {
+  background-image: url("../Images/bg_diary4.jpg");
+  background-size: cover; /* This ensures the background image covers the entire div */
+  background-position:0px -150px;
+  width: 100%; /* Makes the div cover the entire width of the screen */
+  height: 100%; /* Makes the div cover the entire height of the screen */
+  position: fixed;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.diary_body{
+  font-family: "Poppins", sans-serif;
+  height: 20vh;
+}
+
+.diary_subtitle{
+  width: 100%;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  
+}
+
+.search-input {
+  width: 49%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 10%;
+  margin-left: 25%;
+  margin-bottom: 5px;
+}
+
+.city-dropdown {
+  .city-select {
+    width: 50%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    margin-left: 25%;
+  }
+}
+
+.diary-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+
+  .left-panel-container{
+    overflow-y: auto;
+    height: calc(100vh - 350px); 
+    width:50%;
+  }
+  
+  .right-panel-container{
+    overflow-y: auto;
+    height: calc(100vh - 350px);
+    width:50%;
+  }
+
+  .left-panel {
+    flex-grow: 1;
+    max-width: calc(50% - 10px); // Adjust width to fit within viewport
+    margin-right: 10px; // Add margin between left and right panels
+  }
+
+  .right-panel {
+    max-width: calc(50% - 10px); // Adjust width to fit within viewport
+    margin-left: 10px; // Add margin between left and right panels
+  }
+
+  .left-panel {
+    flex-grow: 1;
+    order: 1; // Ensure left panel comes first
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-right: 20px; // Add margin to separate from right panel
+      width: 200%;
+
+      .card {
+        position: relative;
+        width: 400px;
+        height: auto;
+        margin: 10px;
+        border-radius: 10px;
+        background-color: #f7f7f7;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        cursor: pointer;
+
+        .card-content {
+          padding: 15px;
+
+          .rank {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+          }
+
+          .college-name {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #666;
+          }
+        }
+
+        .city {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+          color: #fff;
+          padding: 5px;
+          font-size: 14px;
+          transition: opacity 0.3s;
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        &.selected {
+          background-color: lightgreen;
+        }
+
+        &:hover .city {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .right-panel {
+    // width: 200px;
+    padding-left: 20px;
+    border-left: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    order: 2; // Ensure right panel comes second
+
+    .selected-college {
+      display: flex;
+      margin-bottom: 10px;
+      position: relative;
+      width: 400px;
+      height: 50px;
+      margin: 10px;
+      border-radius: 10px;
+      background-color: #f7f7f7;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .selected-college:hover{
+      background-color: #cfcfcf;
+    }
+
+    .error-message {
+      color: red;
+    }
+  }
+}
+
+.error-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffcccc;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.close-btn {
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px){
+
+  .diary_body{
+    height: 20vh;
+  }
+  
+  .diary_subtitle{
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    
+  }
+  
+  .search-input {
+    width: 49%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 30%;
+    margin-left: 25%;
+    margin-bottom: 5px;
+  }
+  
+  .city-dropdown {
+
+    .city-select {
+      font-family: "Poppins", sans-serif;
+      width: 50%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 5px;
+      margin-left: 25%;
+    }
+  }
+  
+  .diary-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+
+    .left-panel-container{
+      overflow-y: auto;
+      height: calc(100vh - 350px); 
+      width:50%;
+    }
+
+    .right-panel-container{
+      overflow-y: auto;
+      height: calc(100vh - 350px);
+      width:50%;
+    }
+    
+    .left-panel {
+      flex-grow: 1;
+      max-width: calc(50% - 10px); // Adjust width to fit within viewport
+      margin-right: 10px; // Add margin between left and right panels
+    }
+    
+  
+    .right-panel {
+      max-width: calc(50% - 10px); // Adjust width to fit within viewport
+      margin-left: 10px; // Add margin between left and right panels
+    }
+  
+    
+  
+    .right-panel {
+      // width: 200px;
+      padding-left: 20px;
+      border-left: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      order: 2; // Ensure right panel comes second
+  
+      .selected-college {
+        display: flex;
+        margin-bottom: 10px;
+        position: relative;
+        width: 150%;
+        height: auto;
+        margin: 10px;
+        border-radius: 10px;
+        background-color: #f7f7f7;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      .selected-college:hover{
+        background-color: #cfcfcf;
+      }
+  
+      .error-message {
+        color: red;
+      }
+    }
+  }
+  
+  .error-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffcccc;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .close-btn {
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+
+}

@@ -1,0 +1,9 @@
+client/node_modules
+server/.venv/
+server/college.pkl
+server/marks.pkl
+server/model.pkl
+server/node_modules
+server/myenv/
+*.pkl/
+

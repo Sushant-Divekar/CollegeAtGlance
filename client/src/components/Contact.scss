@@ -1,0 +1,418 @@
+.contact{
+    display: flex;
+    flex-direction: row;
+    
+    background: linear-gradient(to left, rgba(230, 247, 255, 1) 65%, rgba(213, 232, 254, 1) 35%);
+    margin-top: 8%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    height: 80vh;
+    
+
+    .submitted_event{
+        display: flex;
+        font-family: 'Poppins', sans-serif;
+        font-weight:bold;
+        font-size: 42px;
+        color: black;
+        width: 65%;
+        height: 74vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .getInTouch{
+        // background-color: green;
+        // display: flex;
+        // flex-direction: column;
+        width: 35%;
+        
+        text-align: center;
+        .getInTouchText{
+            font-family: 'Poppins', sans-serif;
+            font-weight:bold;
+            font-size: 38px;
+            color: black;
+        }
+
+        .contact_details{
+            font-family: 'Poppins', sans-serif;
+            font-weight:400;
+            font-size: 16px;
+            color: black;
+            margin-top: -5%;
+            padding-bottom: 5%;
+        }
+    }
+
+    .feedbackform{
+        width: 65%;
+        height: 74vh;
+
+        .feed_text{
+            font-family: 'Poppins', sans-serif;
+            font-weight:bold;
+            font-size: 42px;
+            color: black;
+            text-align: center;
+        }
+
+
+        .feedback{
+            padding-left: 5%;
+            padding-right: 5%;
+            margin-top: -5%;
+            
+            /* Other styles... */
+
+            .formDiv1,
+            .formDiv2,
+            .nameDiv5,
+            .nameDiv6 {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .formDiv1,
+            .formDiv2 {
+                margin-bottom: 10px; // Adjust spacing between sections if needed
+            }
+
+            .nameDiv1,
+            .nameDiv2,
+            .nameDiv3,
+            .nameDiv4,
+            .nameDiv5,
+            .nameDiv6 {
+                display: flex;
+                flex-direction: column;
+                flex: 1; // Equal width for all elements
+                // padding-right: 10px;
+            }
+            .nameDiv1,
+            .nameDiv3{
+                padding-right: 100px;
+            }
+            .nameDiv5{
+                padding-bottom: 30px;
+            }
+            .nameDiv6{
+                align-items: center;
+                padding-bottom: 5%;
+                button{
+                    width: 50%;
+                    height: 50px;
+                }
+            }
+
+            .nameDiv1,
+            .nameDiv2,
+            .nameDiv3,
+            .nameDiv4{
+                input{
+                    // height: 32px;
+                    
+                    
+                
+                  
+                padding: 5px 12px;
+                font-size: 14px;
+                height: 32px;
+                line-height: 20px;
+                color: #24292e;
+                vertical-align: middle;
+                background-color: #ffffff;
+                background-repeat: no-repeat;
+                background-position: right 8px center;
+                border: 1px solid #e1e4e8;
+                border-radius: 6px;
+                outline: none;
+                box-shadow: rgba(225, 228, 232, 0.2) 0px 1px 0px 0px inset;
+                :focus{
+                    border-color: #0366d6;
+                    outline: none;
+                    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+                }
+                
+                
+                
+                }
+                select{
+                  font-family: "Poppins", sans-serif;
+                  padding: 5px 12px;
+                  font-size: 14px;
+                  height: 32px;
+                  line-height: 20px;
+                  color: #24292e;
+                  vertical-align: middle;
+                  background-color: #ffffff;
+                  background-repeat: no-repeat;
+                  background-position: right 8px center;
+                  border: 1px solid #e1e4e8;
+                  border-radius: 6px;
+                  outline: none;
+                  box-shadow: rgba(225, 228, 232, 0.2) 0px 1px 0px 0px inset;
+                  :focus{
+                      border-color: #0366d6;
+                      outline: none;
+                      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+                  }
+                }
+            }
+
+
+        }
+    }
+
+
+}
+
+label {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #24292e;
+  margin-bottom: 8px;
+}
+
+textarea{
+  font-family: "Poppins", sans-serif;
+  padding: 5px 12px;
+  font-size: 14px;
+  height: 64px;
+  line-height: 20px;
+  color: #24292e;
+  vertical-align: middle;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  outline: none;
+  box-shadow: rgba(225, 228, 232, 0.2) 0px 1px 0px 0px inset;
+  :focus{
+      border-color: #0366d6;
+      outline: none;
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  }
+}
+
+input::placeholder{
+  font-family: "Poppins", sans-serif;
+  color: #24292e;
+  opacity: 0.5;
+  letter-spacing: 0.6px;
+}
+
+textarea::placeholder{
+  color: #24292e;
+  opacity: 0.5;
+  letter-spacing: 0.6px;
+}
+
+.buttons {
+  text-align: center;
+  border-radius:30px;
+  width: fit-content;
+}
+
+$cyan: rgba(213, 232, 254, 1);
+$dark: #24292e;
+$borderW: 2px;
+
+.blob-btn {
+  $numOfBlobs: 4;
+  z-index: 1;
+  position: relative;
+  padding: 20px 46px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $cyan;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: color 0.5s;
+  cursor: pointer;
+  border-radius:30px;
+  
+  &:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: $borderW solid $cyan;
+    border-radius:30px;
+  }
+  
+  &:after {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    left: $borderW*1.5;
+    top: $borderW*1.5;
+    width: 100%;
+    height: 100%;
+
+    transition: all 0.3s 0.2s;
+    border-radius:30px;
+  }
+  
+  &:hover {
+    color: $dark;
+    border-radius:30px;
+    
+    &:after {
+      transition: all 0.3s;
+      left: 0;
+      top: 0;
+      border-radius:30px;
+    }
+  }
+  
+  &__inner {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius:30px;
+    background:#ffffff;
+  }
+  
+  // additional container created, because in FF blobs are breaking overflow:hidden of element with svg gooey filter
+  &__blobs {
+    position: relative;
+    display: block;
+    height: 100%;
+    filter: url('#goo');
+  }
+  
+  &__blob {
+    position: absolute;
+    top: $borderW;
+    width: 100% / $numOfBlobs;
+    height: 100%;
+    background: $cyan;
+    border-radius: 100%;
+    transform: translate3d(0,150%,0) scale(1.7);
+    transition: transform 0.45s;
+    
+    @supports(filter: url('#goo')) {
+      transform: translate3d(0,150%,0) scale(1.4);
+    }
+    
+    @for $i from 1 through $numOfBlobs {
+      &:nth-child(#{$i}) {
+        left: ($i - 1) * (120% / $numOfBlobs);
+        transition-delay: ($i - 1) * 0.08s;
+      }
+    }
+    
+    .blob-btn:hover & {
+      transform: translateZ(0) scale(1.7);
+      
+      @supports(filter: url('#goo')) {
+        transform: translateZ(0) scale(1.4);
+      }
+    }
+  }
+  
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .rectangle{
+        display: none;
+    }
+    .contact {
+        display: flex;
+        flex-direction: column; /* Change to column layout for smaller screens */
+        background: linear-gradient(to top, rgba(230, 247, 255, 1) 70%, rgba(213, 232, 254, 1) 30%);
+        margin-top: 25%;
+        margin-bottom: 10px;
+      
+        .submitted_event{
+            height: 70vh;
+            p{
+                margin-top: -100px;
+                margin-bottom: -100px;
+            }
+        }
+        .feedbackform {
+          font-family: "Poppins", sans-serif;
+          width: 100%; /* Take up full width on smaller screens */
+        //   height: auto; /* Allow height to adjust dynamically */
+          height: 90vh;
+          align-items: center;
+          justify-content: center;
+          
+        }
+      
+        .getInTouch {
+          width: 100%; /* Take up full width on smaller screens */
+          margin-top: 5%; /* Adjust margin for smaller screens */
+          text-align: center;
+      
+          .getInTouchText {
+            font-size: 30px; /* Decrease font size for smaller screens */
+          }
+      
+          .contact_details {
+            font-size: 16px; /* Decrease font size for smaller screens */
+          }
+        }
+      
+        .feedbackform {
+          .feed_text {
+            font-size: 30px; /* Decrease font size for smaller screens */
+          }
+      
+          .feedback {
+            padding: 0 5%; /* Add horizontal padding for smaller screens */
+            margin-top: 0; /* Remove negative margin for smaller screens */
+      
+            .formDiv1,
+            .formDiv2 {
+              flex-direction: column; /* Change to column layout for smaller screens */
+              margin-bottom: 20px; /* Increase spacing between sections for smaller screens */
+            }
+      
+            .nameDiv1,
+            .nameDiv2,
+            .nameDiv3,
+            .nameDiv4,
+            .nameDiv5,
+            .nameDiv6 {
+              padding: 0; /* Remove padding for smaller screens */
+            }
+      
+            .nameDiv6 {
+              button {
+                margin-top: 5px;
+                
+                width: 100%; /* Take up full width on smaller screens */
+              }
+            }
+      
+            input,
+            select {
+              width: 100%; /* Take up full width on smaller screens */
+            }
+          }
+        }
+      }
+      
+}
