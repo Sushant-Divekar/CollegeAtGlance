@@ -16,7 +16,7 @@ const Footer = () => {
           <h3>About Us</h3>
           <p>We College At Glance, revolutionizing college selection!</p>
         </div>
-        <div className="footer-section contact">
+        <div className="footer-section contact" >
           <h3 style={{"color": "#333", "cursor": "pointer"}} onClick={handleClick}>Contact Us</h3>
           {/* <img style={{"height": "240px"}} src={email} alt="email" /> */}
         </div>
@@ -25,6 +25,7 @@ const Footer = () => {
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
+            <li><a href='/diary'>Diary</a></li>
             {/* <li><a href="/contact">Contact</a></li> */}
           </ul>
         </div>

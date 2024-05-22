@@ -11,6 +11,8 @@
     align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     height: 80vh;
+
+    overflow: hidden;
     
 
     .submitted_event{
@@ -332,87 +334,231 @@ $borderW: 2px;
 }
 
 
-@media screen and (max-width: 768px) {
+// @media screen and (max-width: 768px) {
 
-    .rectangle{
-        display: none;
-    }
-    .contact {
-        display: flex;
-        flex-direction: column; /* Change to column layout for smaller screens */
-        background: linear-gradient(to top, rgba(230, 247, 255, 1) 70%, rgba(213, 232, 254, 1) 30%);
-        margin-top: 25%;
-        margin-bottom: 10px;
+//     .rectangle{
+//         display: none;
+//     }
+//     .contact {
+//         display: flex;
+//         flex-direction: column; /* Change to column layout for smaller screens */
+//         background: linear-gradient(to top, rgba(230, 247, 255, 1) 70%, rgba(213, 232, 254, 1) 30%);
+//         margin-top: 25%;
+//         margin-bottom: 10px;
       
-        .submitted_event{
-            height: 70vh;
-            p{
-                margin-top: -100px;
-                margin-bottom: -100px;
-            }
-        }
-        .feedbackform {
-          font-family: "Poppins", sans-serif;
-          width: 100%; /* Take up full width on smaller screens */
-        //   height: auto; /* Allow height to adjust dynamically */
-          height: 90vh;
-          align-items: center;
-          justify-content: center;
+//         .submitted_event{
+//             height: 70vh;
+//             p{
+//                 margin-top: -100px;
+//                 margin-bottom: -100px;
+//             }
+//         }
+//         .feedbackform {
+//           font-family: "Poppins", sans-serif;
+//           width: 100%; /* Take up full width on smaller screens */
+//         //   height: auto; /* Allow height to adjust dynamically */
+//           height: 90vh;
+//           align-items: center;
+//           justify-content: center;
           
-        }
+//         }
       
-        .getInTouch {
-          width: 100%; /* Take up full width on smaller screens */
-          margin-top: 5%; /* Adjust margin for smaller screens */
-          text-align: center;
+//         .getInTouch {
+//           width: 100%; /* Take up full width on smaller screens */
+//           margin-top: 5%; /* Adjust margin for smaller screens */
+//           text-align: center;
       
-          .getInTouchText {
-            font-size: 30px; /* Decrease font size for smaller screens */
-          }
+//           .getInTouchText {
+//             font-size: 30px; /* Decrease font size for smaller screens */
+//           }
       
-          .contact_details {
-            font-size: 16px; /* Decrease font size for smaller screens */
-          }
-        }
+//           .contact_details {
+//             font-size: 16px; /* Decrease font size for smaller screens */
+//           }
+//         }
       
-        .feedbackform {
-          .feed_text {
-            font-size: 30px; /* Decrease font size for smaller screens */
-          }
+//         .feedbackform {
+//           .feed_text {
+//             font-size: 30px; /* Decrease font size for smaller screens */
+//           }
       
-          .feedback {
-            padding: 0 5%; /* Add horizontal padding for smaller screens */
-            margin-top: 0; /* Remove negative margin for smaller screens */
+//           .feedback {
+//             padding: 0 5%; /* Add horizontal padding for smaller screens */
+//             margin-top: 0; /* Remove negative margin for smaller screens */
       
-            .formDiv1,
-            .formDiv2 {
-              flex-direction: column; /* Change to column layout for smaller screens */
-              margin-bottom: 20px; /* Increase spacing between sections for smaller screens */
-            }
+//             .formDiv1,
+//             .formDiv2 {
+//               flex-direction: column; /* Change to column layout for smaller screens */
+//               margin-bottom: 20px; /* Increase spacing between sections for smaller screens */
+//             }
       
-            .nameDiv1,
-            .nameDiv2,
-            .nameDiv3,
-            .nameDiv4,
-            .nameDiv5,
-            .nameDiv6 {
-              padding: 0; /* Remove padding for smaller screens */
-            }
+//             .nameDiv1,
+//             .nameDiv2,
+//             .nameDiv3,
+//             .nameDiv4,
+//             .nameDiv5,
+//             .nameDiv6 {
+//               padding: 0; /* Remove padding for smaller screens */
+//             }
       
-            .nameDiv6 {
-              button {
-                margin-top: 5px;
+//             .nameDiv6 {
+//               button {
+//                 margin-top: 5px;
                 
-                width: 100%; /* Take up full width on smaller screens */
-              }
-            }
+//                 width: 100%; /* Take up full width on smaller screens */
+//               }
+//             }
       
-            input,
-            select {
-              width: 100%; /* Take up full width on smaller screens */
-            }
+//             input,
+//             select {
+//               width: 100%; /* Take up full width on smaller screens */
+//             }
+//           }
+//         }
+//       }
+      
+// }
+
+
+@media screen and (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    margin-top: 25%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    height: auto;
+    padding: 10px;
+    background: linear-gradient(to top, rgba(230, 247, 255, 1) 65%, rgba(213, 232, 254, 1) 35%);
+
+
+    .submitted_event{
+      display: flex;
+      font-family: 'Poppins', sans-serif;
+      font-weight:bold;
+      font-size: 42px;
+      color: black;
+      width: 65%;
+      // height: 14vh;
+      align-items: center;
+      justify-content: center;
+  }
+
+    .getInTouch {
+      width: 100%;
+      margin-top: 20px;
+
+      .getInTouchText {
+        font-size: 32px;
+      }
+
+      .contact_details {
+        font-size: 14px;
+        margin-top: -3%;
+        padding-bottom: 3%;
+      }
+    }
+
+    .feedbackform {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+
+      .feed_text {
+        font-size: 32px;
+      }
+
+      .feedback {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: -3%;
+
+        .formDiv1,
+        .formDiv2,
+        .nameDiv5,
+        .nameDiv6 {
+          flex-direction: column;
+        }
+
+        .formDiv1,
+        .formDiv2 {
+          margin-bottom: 10px; // Adjust spacing between sections if needed
+        }
+
+        .nameDiv1,
+        .nameDiv2,
+        .nameDiv3,
+        .nameDiv4,
+        .nameDiv5,
+        .nameDiv6 {
+          // padding-right: 0;
+          padding-bottom: 10px;
+          width : 90%;
+        }
+
+        .nameDiv6 {
+          align-items: center;
+          button {
+            width: 80%;
+            height: 40px;
+          }
+        }
+
+        input,
+        select {
+          width: 100%;
+          padding: 5px 10px;
+          font-size: 14px;
+          height: 32px;
+          line-height: 20px;
+          color: #24292e;
+          background-color: #ffffff;
+          border: 1px solid #e1e4e8;
+          border-radius: 6px;
+          outline: none;
+          box-shadow: rgba(225, 228, 232, 0.2) 0px 1px 0px 0px inset;
+
+          :focus {
+            border-color: #0366d6;
+            box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
           }
         }
       }
-      
+    }
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 14px;
+    height: 64px;
+    line-height: 20px;
+    color: #24292e;
+    background-color: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    outline: none;
+    box-shadow: rgba(225, 228, 232, 0.2) 0px 1px 0px 0px inset;
+
+    :focus {
+      border-color: #0366d6;
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+  }
+
+  .buttons {
+    text-align: center;
+    width: 100%;
+    margin-bottom: -50%;
+  }
+
+  .blob-btn {
+    padding: 15px 30px;
+    font-size: 14px;
+  }
 }
